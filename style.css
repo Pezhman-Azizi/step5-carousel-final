@@ -1,0 +1,481 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color:  #215753;
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------HEADER----------------------------------------------- */
+#header{
+  position: relative;
+  background: url('images/1-Taq-e-Bostan-Frontal-view.jpeg');
+  height: 25rem;
+  background-size:cover;
+  background-position: center bottom;
+  padding: 2rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  color: white;
+  z-index: 1;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.header-text{
+  color: antiquewhite;
+  letter-spacing: .1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.header-text h1{
+  font-size: 3rem;
+}
+.header-text p{
+  font-size: 1rem;
+  margin-left: 0;
+}
+
+.header-btn {
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+.header-cta-btn {
+  background-color: #215753;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 0.8rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-cta-btn:hover {
+  background-color: #e6a400;
+}
+
+/* -------------------------------------------ABOUT----------------------------------------------- */
+
+#about{
+  display: block;
+  margin-top: 2rem;
+
+  background-color: rgb(212, 211, 211);
+  box-shadow: px 2px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+}
+
+#about h2{
+  padding: 1rem 1rem 0 1rem;
+}
+
+#about p{
+  padding: 1rem 1rem 1rem 1rem;
+}
+/* -------------------------------------------CAROUSEL------------------------------------------- */
+
+.carousel {
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  object-position: center;
+}
+
+/* Make sure all images fit within the carousel and maintain aspect ratio */
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+
+  transition: filter 0.3s ease;
+}
+
+/* Ensure the carousel maintains a reasonable aspect ratio */
+.carousel-container {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Brighten the image on hover */
+.carousel img:hover {
+  filter: brightness(0.8);
+}
+
+/* Overlay that covers all images */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Text inside the overlay */
+.text-box {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.32); /* Semi-transparent background */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.text-box h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-box p {
+  font-size: 1rem;
+}
+
+/* Text styling */
+.text-box h3, .text-box p {
+  margin: 0;
+}
+
+/* Hover effect: make the text-box background bright and text color white */
+.text-box:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Bright white background */
+  color: black; /* Change text color to black for contrast */
+}
+
+/* Positioning buttons */
+button {
+  position: absolute; /* Absolute positioning for left and right alignment */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  padding: 0.5rem 1rem;
+  background-color: #215753ae;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10; /* Ensure buttons are above the images */
+  }
+
+/* Left button */
+button#previous {
+  left: 10px; /* Position it on the left side */
+  }
+
+/* Right button */
+button#next {
+  right: 10px; /* Position it on the right side */
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #e6a400;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Make the shadow more pronounced */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* ------------------------------------------MAIN_TEXT------------------------------------------- */
+.main-text{
+  text-align: center;
+  margin-top: 3rem;
+  text-decoration-style: dotted;
+}
+/* -------------------------------------------CARDS----------------------------------------------- */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.card{
+  width: 300px;
+  background-color: rgb(212, 211, 211);
+  padding: 0 1rem 2rem 1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 1rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-img{
+  width: 300px;
+  height:200px;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  padding-top: 1rem;
+}
+
+.card:hover .card-img {
+  transform: scale(1.2);
+}
+
+.card-text{
+  margin-top: 1.5rem;
+}
+.card-text p{
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.card-1, .card-2, .card-3 {
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+.card-1:hover {
+  box-shadow: 0 4px 12px 4px rgba(30, 129, 176, 0.7); /* Adds the shadow on hover */
+  background-color: white;
+}
+
+.card-2:hover {
+  box-shadow: 0 6px 15px 6px rgba(234, 180, 80, 0.6);
+  background-color: white;
+}
+.card-3:hover {
+  box-shadow: 0 6px 15px 6px rgba(34, 85, 50, 0.7);
+  background-color: white;
+}
+
+/* -------------------------------------------Footer---------------------------------------------- */
+
+.footer {
+  margin: 5rem auto;
+  max-width: 1200px;
+  background-color: rgb(212, 211, 211);
+  height: 10rem;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.44);
+}
+.footer-get-in-touch{
+  padding: 2rem;
+}
+.footer-get-in-touch p{
+  margin-top: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.social-icons ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.social-icons ul li{
+  margin-right: 1rem;
+}
+.social-icon{
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: 0.8s ease;
+  border-radius: 0.5rem;
+  color: #215753;
+}
+.social-icon:hover{
+  background-color: #215753;;
+  color: white;
+
+}
+.footer-social-card{
+  background-color: #215753;;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 2rem;
+  border-radius: 2rem 0 2rem 0;
+  margin:2rem;
+  color:rgb(191, 188, 188);
+  box-shadow: -0.5rem 0.5rem 1px black;
+}
+
+.footer-social-card a{
+  text-decoration: none;
+  color:white;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.footer-social-card a:hover {
+  transform: scale(1.12);
+}
+
+.footer-social-card p{
+  margin-top: 0.5rem;
+}
+
+/*---------------------------------------- Responsiveness for 768px -----------------------------*/
+
+@media screen and (max-width: 768px) {
+  /* Flex column layout for cards */
+  .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+  }
+
+  .card {
+    margin-bottom: 1.5rem; /* Add margin to the bottom */
+    margin: 0 auto;
+
+  }
+  .card-1 .card-2 .card-3{
+    margin-top: 4rem;
+  }
+
+  /* Adjust header text */
+  #header {
+    height: 20rem; /* Reduce the height */
+  }
+
+  .header-text h1 {
+    font-size: 2.5rem; /* Reduce the header font size */
+  }
+
+  .header-btn {
+    margin-top: 0.5rem; /* Adjust margin */
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column; /* Stack the footer content vertically */
+    text-align: center; /* Center-align the text */
+    padding: 4rem 4rem; /* Add some padding for better spacing */
+}
+
+  .footer-get-in-touch {
+    padding: 1rem; /* Reduce padding to fit better on smaller screens */
+  }
+
+  .social-icons ul {
+    justify-content: center; /* Center the social icons */
+  }
+
+  .footer-social-card {
+    margin: 1rem 0; /* Add some margin between the elements */
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+  .footer-get-in-touch h3{
+    padding-top: 1.5rem;
+  }
+}
+
+/*---------------------------------------- Responsiveness for 480px -----------------------------*/
+
+@media screen and (max-width: 480px) {
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+  .footer {
+    padding: 1rem; /* Further reduce padding for very small screens */
+  }
+  .footer-get-in-touch p {
+    font-size: 0.9rem; /* Decrease font size */
+  }
+  .footer-get-in-touch h3{
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
+  .footer-social-card p {
+    font-size: 0.9rem; /* Decrease font size */
+  }
+
+  .social-icon {
+    font-size: 0.9rem; /* Adjust social icon size */
+  }
+}
+
+/*---------------------------------------- Responsiveness for Tablets----------------------------*/
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+  }
+  .card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .card-img{
+    width: 300px;
+    height:200px;
+    padding-top: 0;
+  }
+  .card-text{
+    height: 14rem;
+  }
+
+  .footer {
+      flex-direction: row; /* Keep the row layout for tablets */
+      text-align: left; /* Maintain left alignment */
+      width: 100%;
+  }
+
+  .footer-get-in-touch {
+      padding: 1rem; /* Adjust padding for the get-in-touch section */
+  }
+
+  .footer-get-in-touch p {
+      font-size: 1rem; /* Slightly reduce the font size */
+  }
+
+  .footer-social-card {
+      padding: 1.5rem; /* Add more padding to keep balance */
+  }
+
+  .social-icons ul {
+      justify-content: flex-start; /* Align the icons to the left */
+  }
+
+  .social-icon {
+      font-size: 1rem; /* Keep the icon size reasonable */
+  }
+
+  .footer-social-card p {
+      font-size: 1rem; /* Adjust font size for email */
+  }
+}
